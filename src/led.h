@@ -4,7 +4,7 @@
 #include <Kaleidoscope.h>
 
 #include <Kaleidoscope-LED-ActiveModColor.h>
-#include <Kaleidoscope-LED-Stalker.h>
+#include <Kaleidoscope-LEDEffect-Rainbow.h>
 #include <Kaleidoscope-LEDControl.h>
 #include <Kaleidoscope-LEDEffect-BootGreeting.h>
 #include <LED-Off.h>
@@ -16,17 +16,13 @@ namespace kipples {
       Kaleidoscope.use(&BootGreetingEffect,
 		       &LEDControl,
 		       &ActiveModColorEffect,
-		       &StalkerEffect,
+		       &LEDRainbowEffect,
 		       &LEDOff);
-
-      StalkerEffect.variant = STALKER(BlazingTrail);
 
       LEDOff.activate();
 
       /* defaults
       LEDControl.syncDelay = 16; // millis
-
-      StalkerEffect.stepLength = 50; // millis
 
       ActiveModColorEffect.highlight_color = CRGB(0xff, 0xff, 0xff);
       ActiveModColorEffect.sticky_color = CRGB(0xff, 0x00, 0x00);
