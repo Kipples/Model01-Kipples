@@ -33,4 +33,8 @@ void setup()
 void loop()
 {
   Kaleidoscope.loop();
+
+  if (Layer.isOn(kipples::layers::STENO)) {
+    LEDControl.set_all_leds_to(CRGB(0x56, 0x80, 0x78));
+  }
 }

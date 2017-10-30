@@ -26,9 +26,9 @@ namespace kipples {
     static void toggleSteno()
     {
       if(Layer.isOn(layers::STENO)) {
-	Layer.defaultLayer(layers::WORKMAN);
+	Layer.off(layers::STENO);
       } else {
-	Layer.defaultLayer(layers::STENO);
+	Layer.on(layers::STENO);
       }
     }
 
