@@ -1,3 +1,4 @@
+// -*- mode: c++ -*-
 #include <Kaleidoscope.h>
 
 #include "config.h"
@@ -26,6 +27,7 @@ void setup()
   kipples::steno::setup();
   kipples::oneshot::setup();
   kipples::mousekeys::setup();
+  kipples::macros::setup();
 }
 
 void loop()
