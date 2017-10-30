@@ -24,7 +24,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    M(macros::EMAIL),  Key_6, Key_7, Key_8, Key_9, Key_0, Key_KeypadNumLock,
    Key_RightBracket, Key_J, Key_F, Key_U, Key_P, Key_Semicolon, Key_Equals,
    Key_Y, Key_N, Key_E, Key_O, Key_I, Key_Quote,
-   OSM(RightAlt), Key_K, Key_L, Key_Comma, Key_Period, Key_Slash, Key_Minus,
+   Key_RightAlt, Key_K, Key_L, Key_Comma, Key_Period, Key_Slash, Key_Minus,
    Key_RightShift, OSM(LeftAlt), Key_Backspace, OSM(RightControl),
    ShiftToLayer(layers::FUNCTION)),
 
