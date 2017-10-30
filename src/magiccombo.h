@@ -33,16 +33,17 @@ namespace kipples {
     }
 
     static const kaleidoscope::MagicCombo::combo_t magic_combos[] PROGMEM = {
-      // Palm keys + lower 2 thumb keys on both halves
+      // Palm keys + butterfly
       [STENO] = {
-	R2C7 | R3C7 | R3C6,
-	R3C8 | R2C8 | R3C9
+	R3C6,
+	R3C9 | R2C9
       },
       // Palm keys + Q
       [QWERTY] = {
 	R1C1 | R3C6,
 	R3C9
       },
+      {0,0}
     };
 
     inline void setup()
