@@ -59,21 +59,21 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___),
 
   [layers::STENO] = KEYMAP_STACKED
-  (___, ___, ___, ___, ___, ___, S(N6),
-   ___, S(N1), S(N2), S(N3), S(N4), S(N5), S(ST1),
+  (XXX, XXX, XXX, XXX, XXX, XXX, S(N6),
+   XXX, S(N1), S(N2), S(N3), S(N4), S(N5), S(ST1),
    S(FN), S(S1), S(TL), S(PL), S(HL), S(ST1),
    S(PWR), S(S2), S(KL), S(WL), S(RL), S(ST2), S(ST2),
 
-   S(A), S(O), ___, S(RE1),
-   ___,
+   S(A), S(O), XXX, S(RE1),
+   XXX,
 
-   S(N7), ___, ___, ___, ___, ___, ___,
-   S(ST3), S(N8), S(N9), S(NA), S(NB), S(NC), ___,
+   S(N7), XXX, XXX, XXX, XXX, XXX, XXX,
+   S(ST3), S(N8), S(N9), S(NA), S(NB), S(NC), XXX,
    S(ST3), S(FR), S(PR), S(LR), S(TR), S(DR),
    S(ST4), S(ST4), S(RR), S(BR), S(GR), S(SR), S(ZR),
 
-   S(RE2), ___, S(E), S(U),
-   ___),
+   S(RE2), XXX, S(E), S(U),
+   XXX),
 
   [layers::QWERTY] = KEYMAP_STACKED
   (___, Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
