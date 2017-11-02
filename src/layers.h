@@ -5,10 +5,10 @@ namespace kipples {
   namespace layers {
     enum {
       WORKMAN,
+      QWERTY,
       FUNCTION,
       NUMPAD,
-      STENO,
-      QWERTY
+      STENO
     };
   }
 }
