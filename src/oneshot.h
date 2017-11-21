@@ -11,10 +11,11 @@ namespace kipples {
     {
       Kaleidoscope.use(&OneShot);
 
+      OneShot.double_tap_sticky = false;
+
       /* defaults
 	 OneShot.time_out = 2500; // millis
 	 OneShot.hold_time_out = 200; // millis
-	 OneShot.double_tap_sticky = true;
       */
     }
   }
