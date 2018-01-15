@@ -11,7 +11,8 @@ namespace kipples {
   namespace magiccombo {
     enum {
       STENO,
-      QWERTY
+      QWERTY,
+      STARCRAFT
     };
 
     static void toggleQwerty()
@@ -32,6 +33,15 @@ namespace kipples {
       }
     }
 
+    static void toggleStarcraft()
+    {
+      if(Layer.isOn(layers::STARCRAFT)) {
+	Layer.off(layers::STARCRAFT);
+      } else {
+	Layer.on(layers::STARCRAFT);
+      }
+    }
+
     static const kaleidoscope::MagicCombo::combo_t magic_combos[] PROGMEM = {
       // Palm keys + 6
       [STENO] = {
@@ -41,6 +51,11 @@ namespace kipples {
       // Palm keys + Q
       [QWERTY] = {
 	R1C1 | R3C6,
+	R3C9
+      },
+      // Palm keys + S + C
+      [STARCRAFT] = {
+        R2C2 | R3C4 | R3C6,
 	R3C9
       },
       {0,0}
@@ -66,6 +81,9 @@ void magicComboActions(uint8_t combo_index, uint32_t left_hand, uint32_t right_h
     break;
   case kipples::magiccombo::QWERTY:
     kipples::magiccombo::toggleQwerty();
+    break;
+  case kipples::magiccombo::STARCRAFT:
+    kipples::magiccombo::toggleStarcraft();
     break;
   }
 }

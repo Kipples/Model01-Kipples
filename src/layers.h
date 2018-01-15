@@ -8,7 +8,8 @@ namespace kipples {
       QWERTY,
       FUNCTION,
       NUMPAD,
-      STENO
+      STENO,
+      STARCRAFT
     };
   }
 }

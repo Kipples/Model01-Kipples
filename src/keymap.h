@@ -14,7 +14,7 @@ namespace macros = kipples::macros;
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [layers::WORKMAN] = KEYMAP_STACKED
-  (M(macros::FIRMWARE_VERSION), Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
+  (XXX, Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick, Key_Q, Key_D, Key_R, Key_W, Key_B, Key_LeftBracket,
    Key_Tab, Key_A, Key_S, Key_H, Key_T, Key_G,
    OSM(LeftGui), Key_Z, Key_X, Key_M, Key_C, Key_V, Key_Escape,
@@ -44,7 +44,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ShiftToLayer(layers::FUNCTION)),
 
   [layers::FUNCTION] =  KEYMAP_STACKED
-  (___, Key_F1, Key_F2, Key_F3, Key_F4, Key_F5, XXX,
+  (M(macros::FIRMWARE_VERSION), Key_F1, Key_F2, Key_F3, Key_F4, Key_F5, XXX,
    Key_Tab,  ___, Key_mouseUp, ___, Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
    Key_Home, Key_mouseL, Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,
    Key_End,  Key_PrintScreen, Key_Insert, ___, Key_mouseBtnM, Key_mouseWarpSW, Key_mouseWarpSE,
@@ -88,7 +88,22 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    S(ST4), S(ST4), S(RR), S(BR), S(GR), S(SR), S(ZR),
 
    S(RE2), XXX, S(E), S(U),
-   XXX)
+   XXX),
+
+  [layers::STARCRAFT] = KEYMAP_STACKED
+  (___, ___, Key_F2, Key_F3, Key_F4, ___, Key_0,
+   Key_1, Key_2, Key_3, Key_4, Key_5, Key_6, Key_8,
+   Key_C, Key_J, Key_T, Key_B, Key_F, Key_7,
+   Key_Space, Key_R, Key_E, Key_U, Key_K, Key_9, Key_LeftShift,
+   Key_A, Key_H, Key_V, Key_P,
+   Key_LeftControl,
+
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___,
+   ___)
 
   
 };
