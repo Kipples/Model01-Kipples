@@ -4,12 +4,12 @@
 namespace kipples {
   namespace layers {
     enum {
-      WORKMAN,
-      QWERTY,
-      FUNCTION,
-      NUMPAD,
-      STENO,
-      STARCRAFT
+	  STARCRAFT,
+	  WORKMAN,
+	  QWERTY,
+	  FUNCTION,
+	  NUMPAD,
+	  STENO
     };
   }
 }

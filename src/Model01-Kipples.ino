@@ -8,7 +8,6 @@
 #include "magiccombo.h"
 #include "mousekeys.h"
 #include "numlock.h"
-#include "oneshot.h"
 #include "spacecadet.h"
 #include "steno.h"
 
@@ -25,9 +24,10 @@ void setup()
   kipples::magiccombo::setup();
   kipples::spacecadet::setup();
   kipples::steno::setup();
-  kipples::oneshot::setup();
   kipples::mousekeys::setup();
   kipples::macros::setup();
+
+  Layer.defaultLayer(layers::WORKMAN);
 }
 
 void loop()

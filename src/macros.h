@@ -9,7 +9,9 @@ namespace kipples {
   namespace macros {
     enum {
       EMAIL,
-      FIRMWARE_VERSION
+      FIRMWARE_VERSION,
+      STARCRAFT_GG,
+      STARCRAFT_RESTART
     };
 
     const macro_t *email()
@@ -20,6 +22,20 @@ namespace kipples {
     const macro_t *firmware_version()
     {
       return Macros.type(PSTR(FIRMWARE_VERSION_STRING));
+    }
+
+    const macro_t *starcraft_gg()
+    {
+      return MACRO(I(100),
+		   T(Enter), T(G), T(G), T(Enter),
+		   W(255),
+		   D(LeftAlt), T(Q), U(LeftAlt));
+    }
+
+    const macro_t *starcraft_restart()
+    {
+      return MACRO(I(100),
+		   T(F10), T(E), T(R), T(Enter));
     }
 
     inline void setup()
@@ -42,6 +58,14 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState)
       return kipples::macros::firmware_version();
     }
     break;
+  case kipples::macros::STARCRAFT_GG:
+    if(keyToggledOn(keyState)) {
+      return kipples::macros::starcraft_gg();
+    }
+  case kipples::macros::STARCRAFT_RESTART:
+    if(keyToggledOn(keyState)) {
+      return kipples::macros::starcraft_restart();
+    }
   }
   return MACRO_NONE;
 }

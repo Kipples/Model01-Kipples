@@ -3,7 +3,6 @@
 #include <Kaleidoscope-LEDControl.h>
 #include <Kaleidoscope-Numlock.h>
 #include <Kaleidoscope-Steno.h>
-#include <Kaleidoscope-OneShot.h>
 #include <Kaleidoscope-Macros.h>
 
 #include "layers.h"
@@ -13,19 +12,34 @@ namespace layers = kipples::layers;
 namespace macros = kipples::macros;
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
+  [layers::STARCRAFT] = KEYMAP_STACKED
+  (Key_Escape, ___, Key_F2, Key_F3, Key_F4, ___, Key_0,
+   Key_1, Key_2, Key_3, Key_4, Key_5, Key_6, Key_8,
+   Key_LeftShift, Key_C, Key_J, Key_T, Key_B, Key_7,
+   Key_Space, Key_R, Key_E, Key_U, Key_K, Key_9, Key_LeftShift,
+   Key_A, Key_H, Key_P, Key_S,
+   Key_LeftControl,
+
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, ___, ___, ___,
+   M(macros::STARCRAFT_GG), ___, ___, ___, ___, ___, M(macros::STARCRAFT_RESTART),
+   ___, ___, ___, ___,
+   ShiftToLayer(layers::WORKMAN)),
+
   [layers::WORKMAN] = KEYMAP_STACKED
   (XXX, Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick, Key_Q, Key_D, Key_R, Key_W, Key_B, Key_LeftBracket,
    Key_Tab, Key_A, Key_S, Key_H, Key_T, Key_G,
-   OSM(LeftGui), Key_Z, Key_X, Key_M, Key_C, Key_V, Key_Escape,
-   Key_LeftShift, Key_Spacebar, Key_Enter, OSM(LeftControl),
+   Key_LeftGui, Key_Z, Key_X, Key_M, Key_C, Key_V, Key_Escape,
+   Key_LeftShift, Key_Spacebar, Key_Enter, Key_LeftControl,
    ShiftToLayer(layers::FUNCTION),
 
    M(macros::EMAIL),  Key_6, Key_7, Key_8, Key_9, Key_0, Key_KeypadNumLock,
    Key_RightBracket, Key_J, Key_F, Key_U, Key_P, Key_Semicolon, Key_Equals,
    Key_Y, Key_N, Key_E, Key_O, Key_I, Key_Quote,
    Key_RightAlt, Key_K, Key_L, Key_Comma, Key_Period, Key_Slash, Key_Minus,
-   OSM(RightControl), OSM(LeftAlt), Key_Backspace, Key_RightShift,
+   Key_RightControl, Key_LeftAlt, Key_Backspace, Key_RightShift,
    ShiftToLayer(layers::FUNCTION)),
 
   [layers::QWERTY] = KEYMAP_STACKED
@@ -88,22 +102,6 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    S(ST4), S(ST4), S(RR), S(BR), S(GR), S(SR), S(ZR),
 
    S(RE2), XXX, S(E), S(U),
-   XXX),
-
-  [layers::STARCRAFT] = KEYMAP_STACKED
-  (___, ___, Key_F2, Key_F3, Key_F4, ___, Key_0,
-   Key_1, Key_2, Key_3, Key_4, Key_5, Key_6, Key_8,
-   Key_C, Key_J, Key_T, Key_B, Key_F, Key_7,
-   Key_Space, Key_R, Key_E, Key_U, Key_K, Key_9, Key_LeftShift,
-   Key_A, Key_H, Key_V, Key_P,
-   Key_LeftControl,
-
-   ___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___,
-   ___)
-
+   XXX)
   
 };

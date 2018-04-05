@@ -36,9 +36,9 @@ namespace kipples {
     static void toggleStarcraft()
     {
       if(Layer.isOn(layers::STARCRAFT)) {
-	Layer.off(layers::STARCRAFT);
+	Layer.defaultLayer(layers::WORKMAN);
       } else {
-	Layer.on(layers::STARCRAFT);
+	Layer.defaultLayer(layers::STARCRAFT);
       }
     }
 
