@@ -3,7 +3,6 @@
 
 #include <Kaleidoscope.h>
 
-#include <Kaleidoscope-LED-ActiveModColor.h>
 #include <Kaleidoscope-LEDEffect-Rainbow.h>
 #include <Kaleidoscope-LEDControl.h>
 #include <Kaleidoscope-LEDEffect-BootGreeting.h>
@@ -15,7 +14,6 @@ namespace kipples {
     {
       Kaleidoscope.use(&BootGreetingEffect,
 		       &LEDControl,
-		       &ActiveModColorEffect,
 		       &LEDRainbowEffect,
 		       &LEDOff);
 

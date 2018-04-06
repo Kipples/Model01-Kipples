@@ -102,6 +102,23 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    S(ST4), S(ST4), S(RR), S(BR), S(GR), S(SR), S(ZR),
 
    S(RE2), XXX, S(E), S(U),
-   XXX)
+   XXX),
+
+  [layers::ASM] = KEYMAP_STACKED
+  (XXX, Key_F13, Key_F14, Key_F15, XXX, XXX, XXX,
+   XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+   XXX, Key_F20, XXX, Key_F17, XXX, XXX,
+   XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+   XXX, XXX, XXX, XXX,
+   Key_F19,
+
+   XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+   XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+   XXX, XXX, XXX, XXX, XXX, XXX,
+   XXX, XXX, XXX, XXX, XXX, XXX, XXX,
+
+   XXX, XXX, XXX, XXX,
+   ___)
   
 };
