@@ -10,7 +10,6 @@ namespace kipples {
 	  FUNCTION,
 	  NUMPAD,
 	  STENO,
-	  ASM,
     };
   }
 }
