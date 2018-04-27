@@ -4,6 +4,7 @@
 #include <Kaleidoscope-Numlock.h>
 #include <Kaleidoscope-Steno.h>
 #include <Kaleidoscope-Macros.h>
+#include <Kaleidoscope-OneShot.h>
 
 #include "layers.h"
 #include "macros.h"
@@ -32,14 +33,14 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Backtick, Key_Q, Key_D, Key_R, Key_W, Key_B, Key_LeftBracket,
    Key_Tab, Key_A, Key_S, Key_H, Key_T, Key_G,
    Key_LeftGui, Key_Z, Key_X, Key_M, Key_C, Key_V, Key_Escape,
-   Key_LeftShift, Key_Spacebar, Key_Enter, Key_LeftControl,
+   Key_LeftShift, Key_Spacebar, Key_Enter, OSM(LeftControl),
    ShiftToLayer(layers::FUNCTION),
 
    M(macros::EMAIL),  Key_6, Key_7, Key_8, Key_9, Key_0, Key_KeypadNumLock,
    Key_RightBracket, Key_J, Key_F, Key_U, Key_P, Key_Semicolon, Key_Equals,
    Key_Y, Key_N, Key_E, Key_O, Key_I, Key_Quote,
    Key_RightAlt, Key_K, Key_L, Key_Comma, Key_Period, Key_Slash, Key_Minus,
-   Key_RightControl, Key_LeftAlt, Key_Backspace, Key_RightShift,
+   OSM(RightControl), OSM(LeftAlt), Key_Backspace, Key_RightShift,
    ShiftToLayer(layers::FUNCTION)),
 
   [layers::QWERTY] = KEYMAP_STACKED

@@ -10,6 +10,7 @@
 #include "numlock.h"
 #include "spacecadet.h"
 #include "steno.h"
+#include "oneshot.h"
 
 #include "keymap.h"
 
@@ -26,6 +27,7 @@ void setup()
   kipples::steno::setup();
   kipples::mousekeys::setup();
   kipples::macros::setup();
+  kipples::oneshot::setup();
 
   Layer.defaultLayer(layers::WORKMAN);
 }
